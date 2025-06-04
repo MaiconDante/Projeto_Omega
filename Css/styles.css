@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../Assets/textura-fundo.png);
+    background-attachment: fixed;
+    font-family: Open Sans, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+iframe {
+    width: 100%;
+}
+
+/* Resetando tudo para aplicar a nossa maneira */
+body,
+h1,
+h2,
+h3,
+p,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#contato a {
+    color: blue;
+}
+
+#contato a:hover,
+#contato a:focus {
+    text-decoration: underline;
+}
+
+header,
+footer {
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+header {
+    border-bottom: solid 2px;
+    margin-bottom: 8px;
+}
+
+footer {
+    border-top: solid 2px;
+}
+
+main {
+    width: 95%;
+    margin: auto;
+}
+
+article {
+    background-color: white;
+    box-shadow: gray 2px 2px 5px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+h1,
+h2,
+h3,
+nav,
+button,
+#destaque article,
+p {
+    font-family: Orbitron, Verdana, sans-serif;
+}
+
+h2,
+h3,
+p {
+    padding: 1% 0;
+}
+
+#destaque {
+    background-image: url(../Assets/earth.jpg);
+    height: 500px;
+    background-attachment: fixed;
+    background-position: top center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0;
+}
+
+#destaque article,
+#destaque p,
+#destaque h2 {
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.499);
+    margin: 8px 0;
+    padding: 2%;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+
+    animation-name: aparecer;
+    animation-duration: 5s;
+}
+
+#destaque article,
+#destaque h2 {
+    font-size: 64px;
+}
+
+#destaque article,
+#destaque p {
+    font-size: 24px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+        color: darkblue;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+footer img {
+    width: 50px;
+}
+
+footer h2 {
+    font-size: 1.2rem;
+}
+
+footer p {
+    font-size: 0.5rem;
+}
+
+section, figure {
+    margin: 40px 0;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+h1, h1 a, nav, nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    padding: 5px 0;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+}
+
+h1 a {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+nav a {
+    height: 60px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+nav a:hover, nav a:focus {
+    background-color: rgba(0, 0, 0, 0.581);
+    color:white;
+    text-shadow: black 2px 2px 2px;
+}
+
+input, textarea {
+    border: solid 2px;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 10px;
+    letter-spacing: 5px;
+}
+
+button:hover, button:focus {
+    background-color: blue;
+    cursor: pointer;
+}
+
+#voltar a {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 0.7rem;
+}
+
+#voltar a:hover, #voltar a:focus {
+    background-color: blue;
+}
+
+#voltar {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+/* Medias Query */
+@media screen and (min-width:710px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:750px){
+    .grupo{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.grupo section, .grupo figure {
+    width: 49%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+@media screen and (min-width: 1000px){
+    header{
+        position: sticky;
+        top: 0;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+
+    #voltar { display: none;}
+
+    #o-que-fazemos, #nossas-equipes, #contato {
+        scroll-margin-top: 100px;
+    }
+
+    .container, main {
+        max-width: 1000px;
+    }
+
+    html {font-size: 22px;}
+}
